@@ -18,10 +18,12 @@ import pantai3 from './image/pantai3.jpg';
 import mrt from './image/mrt.jpg';
 import trans from './image/trans.jpg';
 import krl from './image/krl.jpg';
+import back from './image/back.png';
 
 export {Home, Wisata, Transportasi, Bantuan};
 export {
   BannerHome,
+  back,
   People,
   Luas,
   Gubernur,

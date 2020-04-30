@@ -19,7 +19,7 @@ import {
   pantai3,
 } from '../../Utils';
 import {ScrollView} from 'react-native-gesture-handler';
-import {Card} from '../../Utils';
+import {AncolButton} from '../../Components/CardButton';
 
 const Wisata = ({navigation}) => {
   const handleGoTo = (screen) => navigation.navigate(screen);
@@ -59,9 +59,11 @@ const Wisata = ({navigation}) => {
             <Text style={styles.wrapper.text}>MUSEUM</Text>
           </View>
           <ScrollView horizontal>
-            <View style={styles.wrapper.card}>
-              <Image source={pantai} style={styles.wrapper.image} />
-            </View>
+            <AncolButton
+              onPress={() => {
+                handleGoTo('Ancol');
+              }}
+            />
             <View style={styles.wrapper.card}>
               <Image source={pantai2} style={styles.wrapper.image} />
             </View>

@@ -1,6 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Homepage, Transportasipage, Bantuanpage, Wisatapage} from '../pages';
+import {
+  Homepage,
+  Ancolpage,
+  Transportasipage,
+  Bantuanpage,
+  Wisatapage,
+} from '../pages';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +31,11 @@ const Router = () => {
       <Stack.Screen
         name="Bantuan"
         component={Bantuanpage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Ancol"
+        component={Ancolpage}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
