@@ -6,6 +6,7 @@ import TransportasiButton from './Transportasi';
 import BantuanButton from './BantuanButton';
 import CardButton from './CardButton';
 import BackButton from './BackButton';
+
 export {
   ActionButton,
   BackButton,
@@ -16,3 +17,4 @@ export {
   TransportasiButton,
   CardButton,
 };
+export * from './CardButton';

@@ -19,7 +19,18 @@ import {
   pantai3,
 } from '../../Utils';
 import {ScrollView} from 'react-native-gesture-handler';
-import {AncolButton} from '../../Components/CardButton';
+import {
+  AncolButton,
+  TamenButton,
+  TamkodButton,
+  TamsurButton,
+  MusgajButton,
+  KotuButton,
+  PancolButton,
+  TidungButton,
+} from '../../Components/CardButton';
+import {Musgajpage} from '..';
+import MuslayButton from '../../Components/CardButton/MuslayButton';
 
 const Wisata = ({navigation}) => {
   const handleGoTo = (screen) => navigation.navigate(screen);
@@ -31,29 +42,41 @@ const Wisata = ({navigation}) => {
             horizontal
             style={{marginTop: 15}}
             showHorizontalScrollIndicator={false}>
-            <View style={styles.wrapper.card}>
-              <Image source={Taman1} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={Taman2} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={Taman3} style={styles.wrapper.image} />
-            </View>
+            <TamenButton
+              onPress={() => {
+                handleGoTo('Taman Menteng');
+              }}
+            />
+            <TamkodButton
+              onPress={() => {
+                handleGoTo('Taman Kodok');
+              }}
+            />
+            <TamsurButton
+              onPress={() => {
+                handleGoTo('Taman Suropati');
+              }}
+            />
           </ScrollView>
           <View style={styles.wrapper.wrappertext}>
             <Text style={styles.wrapper.text}>TAMAN</Text>
           </View>
           <ScrollView horizontal>
-            <View style={styles.wrapper.card}>
-              <Image source={Museum} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={Museum2} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={Museum3} style={styles.wrapper.image} />
-            </View>
+            <MusgajButton
+              onPress={() => {
+                handleGoTo('Museum Gajah');
+              }}
+            />
+            <KotuButton
+              onPress={() => {
+                handleGoTo('Kota Tua');
+              }}
+            />
+            <MuslayButton
+              onPress={() => {
+                handleGoTo('Museum Layang-layang');
+              }}
+            />
           </ScrollView>
           <View style={styles.wrapper.wrappertext}>
             <Text style={styles.wrapper.text}>MUSEUM</Text>
@@ -64,12 +87,16 @@ const Wisata = ({navigation}) => {
                 handleGoTo('Ancol');
               }}
             />
-            <View style={styles.wrapper.card}>
-              <Image source={pantai2} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={pantai3} style={styles.wrapper.image} />
-            </View>
+            <PancolButton
+              onPress={() => {
+                handleGoTo('Pulau Bidadari');
+              }}
+            />
+            <TidungButton
+              onPress={() => {
+                handleGoTo('Pulau Tidung');
+              }}
+            />
           </ScrollView>
           <View style={styles.wrapper.wrappertext}>
             <Text style={styles.wrapper.text}>PANTAI</Text>

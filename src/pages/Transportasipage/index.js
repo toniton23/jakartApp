@@ -5,6 +5,10 @@ import {
   HomeButton,
   BantuanButton,
   TransportasiButton,
+  KotuButton,
+  KrlButton,
+  MrtButton,
+  TransButton,
 } from '../../Components';
 import {colors, krl, mrt, trans} from '../../Utils';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -15,25 +19,29 @@ const Transportasi = ({navigation}) => {
     <View>
       <View style={styles.wrapper.body}>
         <ScrollView>
-          <View style={{marginTop: 15}}>
-            <View style={styles.wrapper.card}>
-              <Image source={krl} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.wrappertext}>
-              <Text style={styles.wrapper.text}>KRL</Text>
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={mrt} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.wrappertext}>
-              <Text style={styles.wrapper.text}>MRT</Text>
-            </View>
-            <View style={styles.wrapper.card}>
-              <Image source={trans} style={styles.wrapper.image} />
-            </View>
-            <View style={styles.wrapper.wrappertext}>
-              <Text style={styles.wrapper.text}>TRANS JAKARTA</Text>
-            </View>
+          <KrlButton
+            onPress={() => {
+              handleGoTo('Krl');
+            }}
+          />
+          <View style={styles.wrapper.wrappertext}>
+            <Text style={styles.wrapper.text}>KRL</Text>
+          </View>
+          <MrtButton
+            onPress={() => {
+              handleGoTo('Mrt');
+            }}
+          />
+          <View style={styles.wrapper.wrappertext}>
+            <Text style={styles.wrapper.text}>MRT</Text>
+          </View>
+          <TransButton
+            onPress={() => {
+              handleGoTo('Trans');
+            }}
+          />
+          <View style={styles.wrapper.wrappertext}>
+            <Text style={styles.wrapper.text}>TRANS JAKARTA</Text>
           </View>
         </ScrollView>
       </View>
